@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel</title>
+    <title>document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -15,19 +15,17 @@
     <main>
         <div class="content">
             <div class="images">
-                <img src="./images/img1.jpg" alt="">
-                <img src="./images/imag2.jpg" alt="">
-                <img src="./images/img3.jpg" alt="">
-                <img src="./images/img4.jpg" alt="">
-                <img src="./images/img5.jpg" alt="">
-                <img src="./images/img6.jpg" alt="">
+                <img src="./images/img1.jpg" alt="will soon be uploaded">
+                <img src="./images/imag2.jpg" alt="will soon be uploaded">
+                <img src="./images/img3.jpg" alt="will soon be uploaded">
+                <img src="./images/img4.jpg" alt="will soon be uploaded">
+                <img src="./images/img5.jpg" alt="wil soon be uploaded">
+                <img src="./images/img6.jpg" alt="will soon be uploaded">
             </div>
-
-            <div onclick="side_slide(-1)" class="slide left">
+            <div id="arrow" hidden onclick="side_slide(-1)" class="slide left">
                 <span class="fas fa-angle-left"></span>
             </div>
-
-            <div onclick="side_slide(1)" class="slide right">
+            <div id="arrow1" hidden onclick="side_slide(1)" class="slide right">
                 <span class="fas fa-angle-right"></span>
             </div>
 
@@ -41,27 +39,7 @@
             </div>
         </div>
 
-        <script>
-            var indexValue = 1;
-            showImg(indexValue);
-            function btn_slide(e){showImg(indexValue = e);}
-            function side_slide(e){showImg(indexValue += e);}
-            function showImg(e){
-                var i;
-                const img = document.querySelectorAll('img');
-                const sliders = document.querySelectorAll('.btn-sliders span');
-                if(e > img.length){indexValue = 1}
-                if(e < 1){indexValue = img.length}
-                for(i = 0; i < img.length; i++ ){
-                    img[i].style.display = "none";
-                }
-                for(i = 0; i < sliders.length; i++ ){
-                    sliders[i].style.background = "rgba(255,255,255,0.1)";
-                }
-                img[indexValue-1].style.display = "block";
-                sliders[indexValue-1].style.background = "white";
-            }
-        </script>
+        <script src="./script.js"></script>
     </main>
     <footer></footer>
 </body>
