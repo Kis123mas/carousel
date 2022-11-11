@@ -1,4 +1,4 @@
-## Hosted link: https://kis123mas.github.io/carousel/
+### Hosted link: https://kis123mas.github.io/carousel/
 
 ## Carousel/Slideshow
 
